@@ -3,25 +3,94 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-color: #000000;
+  --background-start: #d6dbdc;
+  --background-end: #ffffff;
+  --button-bg: #bfdbfe;
+  --button-bg-hover: #1d4ed8;
+  --footer-bg: #3b82f6;
+  --border-color: #e5e7eb;
+  --heading-color: #111827;
+  --text-color: #374151;
+  --font-sans: 'Helvetica Neue', sans-serif;
+  --font-serif: 'Georgia', serif;
+  --font-mono: 'Menlo', monospace;
+  --hover-transition: all 0.3s ease;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-color: #ffffff;
+    --background-start: #000000d6;
+    --background-end: #000000d0;
+    --button-bg: #1e40af;
+    --button-bg-hover: #bfdbfe;
+    --footer-bg: #1e3a8a;
+    --border-color: #4b5563;
+    --heading-color: #f9fafb;
+    --text-color: #d1d5db;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--font-sans);
+  color: var(--text-color);
+  background: linear-gradient(to bottom, transparent, var(--background-end)) var(--background-start);
+}
+
+h1 { font-size: 2.25rem; } /* 36px */
+h2 { font-size: 1.875rem; } /* 30px */
+h3 { font-size: 1.5rem; } /* 24px */
+h4 { font-size: 1.125rem; } /* 18px */
+h5 { font-size: 1rem; } /* 16px */
+h6 { font-size: 0.875rem; } /* 14px */
+
+header {
+  @apply flex justify-between p-4;
+}
+
+footer {
+  @apply flex justify-center items-center p-6 text-white font-bold;
+  background-color: var(--footer-bg);
+}
+
+button {
+  @apply text-white font-bold py-2 px-4 rounded;
+  background-color: var(--button-bg);
+  transition: var(--hover-transition);
+  &:hover {
+    background-color: var(--button-bg-hover);
+  }
+}
+
+a {
+  color: var(--button-bg);
+  transition: var(--hover-transition);
+  &:hover {
+    color: var(--button-bg-hover);
+  }
+}
+
+input, textarea, select, button {
+  @apply border px-3 py-2 rounded;
+  border-color: var(--border-color);
+  transition: var(--hover-transition);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  @apply border p-2;
+  border-color: var(--border-color);
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
+hr {
+  border-top: 1px solid var(--border-color);
 }

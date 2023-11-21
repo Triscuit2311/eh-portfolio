@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Wine",
+        "directory": "wine3",
+        "items": [
+            {
+                "name": "some wine",
+                "filename": "wine1.jpg",
+                "description": "its fuckin wine dude",
+                "type": "image"
+            },
+            {
+                "name": "Other wine",
+                "filename": "wine2.jpg",
+                "description": "ITS WINE",
+                "type": "image"
+            },
+            {
+                "name": "Cool Video of WINE",
+                "filename": "wine.mp4",
+                "description": "A short clip showing wine.",
+                "type": "video"
+            }
+        ]
+    }
+]

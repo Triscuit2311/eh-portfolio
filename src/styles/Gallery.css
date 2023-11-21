@@ -1,0 +1,84 @@
+.art-set {
+    margin-bottom: 20px;
+}
+
+.slide-container {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    position: relative; /* Set to relative to position slides absolutely inside it */
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 100%; /* Start outside the visible area */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.5s ease-in-out; /* Smooth transition for the slide movement */
+}
+
+.slide.current {
+    left: 0; /* Current slide is positioned normally */
+}
+
+.slide.next {
+    left: 600px; /* Position the next slide next to the current one */
+}
+
+.slide-media {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.media-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Adjust text color as needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.6s ease;
+}
+
+.media-container:hover .overlay {
+    opacity: 1; /* Show on hover */
+}
+
+.title {
+    margin: 0;
+    padding: 10px;
+}
+
+.description {
+    display: none; /* Hide description initially */
+}
+
+.media-container:hover .description {
+    display: block; /* Show description on hover */
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: 100%;
+    height: 100vh; /* Adjust height as needed */
+    overflow: auto; /* For scrolling if content overflows */
+    gap: 10px; /* Space between items */
+}
