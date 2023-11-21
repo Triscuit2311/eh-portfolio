@@ -5,8 +5,10 @@ export default function Gallery({ artwork_sets }) {
 
 
 
-    const minSize = 300; // Minimum size in pixels
-    const maxSize = 600; // Maximum size in pixels
+    const minSize = 100;
+    const maxSize = 400;
+    const minSlideTime = 3000;
+    const maxSlideTime = 9000;
 
     // Assigning sizes to each art set using useMemo
     const artSetSizes = useMemo(() => artwork_sets.map(() => ({
@@ -23,9 +25,7 @@ export default function Gallery({ artwork_sets }) {
 
     useEffect(() => {
         const intervals = artwork_sets.map((_, index) => {
-            // Generate a random time between 1 to 4 seconds (1000 to 4000 ms)
-            const timeInterval = Math.random() * 6000 + 3000;
-
+            const timeInterval = Math.random() * (maxSlideTime - minSlideTime) + minSlideTime;
             return setInterval(() => {
                 setCurrentSlides(currentSlides =>
                     currentSlides.map((slide, slideIndex) =>
