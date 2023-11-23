@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Twitch Clips",
+        "directory": "twitch_1",
+        "items": [
+            {
+                "name": "start screen",
+                "filename": "Start_Screen.webm",
+                "description": "render",
+                "type": "video"
+            },
+            {
+                "name": "pause screen",
+                "filename": "Pause_screen.webm",
+                "description": "render",
+                "type": "video"
+            }
+        ]
+    }
+]

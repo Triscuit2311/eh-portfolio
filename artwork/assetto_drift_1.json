@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Assetto Corsa Drift Car Liveries",
+        "directory": "assetto_drift_1",
+        "items": [
+            {
+                "name": "ac",
+                "filename": "i1.png",
+                "description": "livery",
+                "type": "image"
+            },
+            {
+                "name": "ac",
+                "filename": "i2.jpg",
+                "description": "livery",
+                "type": "image"
+            },
+            {
+                "name": "ac",
+                "filename": "i3.png",
+                "description": "livery",
+                "type": "image"
+            },
+            {
+                "name": "ac",
+                "filename": "i4.png",
+                "description": "livery",
+                "type": "image"
+            },
+            {
+                "name": "ac",
+                "filename": "i5.png",
+                "description": "livery",
+                "type": "image"
+            },
+            {
+                "name": "ac",
+                "filename": "i6.png",
+                "description": "livery",
+                "type": "image"
+            },
+            {
+                "name": "ac",
+                "filename": "i7.png",
+                "description": "livery",
+                "type": "image"
+            },
+            {
+                "name": "ac",
+                "filename": "i8.png",
+                "description": "livery",
+                "type": "image"
+            },
+            {
+                "name": "ac",
+                "filename": "ss1.jpg",
+                "description": "livery",
+                "type": "image"
+            }
+        ]
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "title": "GTAV GT-R",
+        "directory": "gta5_gtr",
+        "items": [
+            {
+                "name": "shot1",
+                "filename": "img1.png",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "shot2",
+                "filename": "img2.png",
+                "description": "render",
+                "type": "image"
+            }
+        ]
+    }
+]

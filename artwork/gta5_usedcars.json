@@ -1,0 +1,38 @@
+[
+    {
+        "title": "GTA5 Used Car Dealship",
+        "directory": "gta5_usedcars",
+        "items": [
+            {
+                "name": "",
+                "filename": "i1.jpeg",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "",
+                "filename": "i2.jpeg",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "",
+                "filename": "i3.jpeg",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "",
+                "filename": "i4.jpeg",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "",
+                "filename": "i5.jpeg",
+                "description": "render",
+                "type": "image"
+            }
+        ]
+    }
+]

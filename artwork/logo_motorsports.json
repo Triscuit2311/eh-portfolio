@@ -1,0 +1,20 @@
+[
+    {
+        "title": "LOGO MOTORSPORTS BUSINESS CARDS",
+        "directory": "logo_motorsports",
+        "items": [
+            {
+                "name": "shot1",
+                "filename": "image.png",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "shot2",
+                "filename": "image2.png",
+                "description": "render",
+                "type": "image"
+            }
+        ]
+    }
+]

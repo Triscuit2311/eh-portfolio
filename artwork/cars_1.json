@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Car Renders",
+        "directory": "cars_1",
+        "items": [
+            {
+                "name": "",
+                "filename": "i1.png",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "",
+                "filename": "i2.png",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "",
+                "filename": "i3.png",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "",
+                "filename": "i4.png",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "",
+                "filename": "i5.png",
+                "description": "render",
+                "type": "image"
+            }
+        ]
+    }
+]
