@@ -6,7 +6,6 @@ export default function BasicInfo() {
       <h2>Basic Info</h2>
       <p>Name: ...</p>
       <p>Location: ...</p>
-      // Add more details here as per your requirements
     </div>
   );
 }

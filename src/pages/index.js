@@ -10,7 +10,6 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
 
 
-
 export default function Home({ artwork_sets }) {
     const particlesInit = useCallback(async engine => {
         console.log(engine);
