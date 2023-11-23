@@ -105,7 +105,7 @@ export default function Home({ artwork_sets }) {
             </Head>
 
             <main className='main'>
-                <div className="artist-name">Dante Trisciuzzi</div>
+                <div className="artist-name">Eddie Householder</div>
                 <div className='gallery-background'>
                     <Gallery artwork_sets={artwork_sets} />
                 </div>
@@ -139,14 +139,17 @@ export async function getStaticProps() {
             var art_set = { title: metaData[0]['title'], items: [] }
 
             metaData[0]['items'].forEach(element => {
+
+                if(element['filename'].includes("webm") ){
+                    console.log(path.join(assetBasePath, element['filename']));
+                }
+                
                 var art_item = {
                     title: element['name'],
                     description: element['description'],
                     type: element['type'],
-                    // <img src="/artwork/golden_gate/gg1.jpg" alt="Static Image" />
                     file: path.join(assetBasePath, element['filename'])
                 }
-                //console.log(art_item);
                 art_set.items.push(art_item);
             });
 

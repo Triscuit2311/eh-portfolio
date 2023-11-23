@@ -4,7 +4,9 @@ import { useGesture } from 'react-use-gesture';
 import "@/styles/Gallery.css";
 
 export default function FloatyGallery({ artwork_sets }) {
-    const minSize = 200;
+
+    
+    const minSize = 300;
     const maxSize = 400;
     const ratio = 9 / 16;
     const minSlideTime = 3000;
@@ -81,37 +83,37 @@ export default function FloatyGallery({ artwork_sets }) {
             const horizontalMargin = containerRect.width * marginPercent / 100;
             const verticalMargin = containerRect.height * marginPercent / 100;
 
-            // // Random position within margins
-             const x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
-             const y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
+            // // // Random position within margins
+            //  const x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
+            //  const y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
 
 
-            // let x, y, isPositionUnique;
-            // do {
-            //     // Random position within margins
-            //     x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
-            //     y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
-            //     artSetSizes[index].x = x;
-            //     artSetSizes[index].y = y;
+            let x, y, isPositionUnique;
+            do {
+                // Random position within margins
+                x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
+                y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
+                artSetSizes[index].x = x;
+                artSetSizes[index].y = y;
 
-            //     isPositionUnique = true;
-            //     // Check if the position overlaps with any previous positions
+                isPositionUnique = true;
+                // Check if the position overlaps with any previous positions
 
-            //     const thresh = 100;
+                const thresh = 50;
 
-            //     for (let i = 0; i < artSetSizes.length; i++) {
-            //         if(i === index) continue;
+                for (let i = 0; i < artSetSizes.length; i++) {
+                    if(i === index) continue;
                    
-            //         console.log(artSetSizes[i]);
+                    console.log(artSetSizes[i]);
 
-            //         if ( Math.abs(artSetSizes[i].x - x) < thresh || Math.abs(artSetSizes[i].y - y) < thresh ) {
+                    if ( Math.abs(artSetSizes[i].x - x) < thresh || Math.abs(artSetSizes[i].y - y) < thresh ) {
                         
-            //             isPositionUnique = false;
-            //             break;
-            //         }
+                        isPositionUnique = false;
+                        break;
+                    }
                     
-            //     }
-            // } while (!isPositionUnique);
+                }
+            } while (!isPositionUnique);
 
             
             return {
