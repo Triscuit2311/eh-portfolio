@@ -1,0 +1,20 @@
+[
+    {
+        "title": "silly stuff",
+        "directory": "silly",
+        "items": [
+            {
+                "name": "shot1",
+                "filename": "nft1.jpg",
+                "description": "render",
+                "type": "image"
+            },
+            {
+                "name": "shot2",
+                "filename": "otter.png",
+                "description": "render",
+                "type": "image"
+            }
+        ]
+    }
+]
