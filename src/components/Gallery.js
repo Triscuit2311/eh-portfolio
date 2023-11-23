@@ -6,7 +6,7 @@ import "@/styles/Gallery.css";
 export default function FloatyGallery({ artwork_sets }) {
 
     
-    const minSize = 300;
+    const minSize = 100;
     const maxSize = 400;
     const ratio = 9 / 16;
     const minSlideTime = 3000;
