@@ -129,7 +129,9 @@ export async function getStaticProps() {
     for (let index = 0; index < artworkMetadatas.length; index++) {
 
         try {
-            const element = artworkMetadatas[index];
+            if (!artworkMetadatas[index].includes(".json")){
+                continue;
+            }
             const metadataPath = path.join(artworksDir, artworkMetadatas[index]);
             const metaDataRaw = fs.readFileSync(metadataPath, { encoding: 'utf-8' });
             const metaData = JSON.parse(metaDataRaw);

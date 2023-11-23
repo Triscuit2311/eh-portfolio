@@ -73,56 +73,57 @@ export default function FloatyGallery({ artwork_sets }) {
     });
 
     // Client side initialization
+    // useEffect(() => {
+    //     set(index => {
+    //         const containerRect = document.querySelector('.gallery-container').getBoundingClientRect();
+
+    //         const centerMarginWidth = containerRect.width * centerMarginWidthPercent / 100;
+    //         const centerMarginHeight = containerRect.height * centerMarginHeightPercent / 100;
+    //         // Calculate margin in pixels
+    //         const horizontalMargin = containerRect.width * marginPercent / 100;
+    //         const verticalMargin = containerRect.height * marginPercent / 100;
+
+    //         // // // Random position within margins
+    //          const x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
+    //          const y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
+            
+    //         return {
+    //             xy: [x, y],
+    //             config: { mass: slideshow_mass, tension: slideshow_tension, friction: slideshow_friction }
+    //         };
+    //     });
+    // }, [set, artwork_sets.length, artSetSizes]);
+
     useEffect(() => {
         set(index => {
             const containerRect = document.querySelector('.gallery-container').getBoundingClientRect();
-
-            const centerMarginWidth = containerRect.width * centerMarginWidthPercent / 100;
-            const centerMarginHeight = containerRect.height * centerMarginHeightPercent / 100;
-            // Calculate margin in pixels
-            const horizontalMargin = containerRect.width * marginPercent / 100;
-            const verticalMargin = containerRect.height * marginPercent / 100;
-
-            // // // Random position within margins
-             const x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
-             const y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
-
-
-            // let x, y, isPositionUnique;
-            // do {
-            //     // Random position within margins
-            //     x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
-            //     y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
-            //     artSetSizes[index].x = x;
-            //     artSetSizes[index].y = y;
-
-            //     isPositionUnique = true;
-            //     // Check if the position overlaps with any previous positions
-
-            //     const thresh = 50;
-
-            //     for (let i = 0; i < artSetSizes.length; i++) {
-            //         if(i === index) continue;
-                   
-            //         console.log(artSetSizes[i]);
-
-            //         if ( Math.abs(artSetSizes[i].x - x) < thresh || Math.abs(artSetSizes[i].y - y) < thresh ) {
-                        
-            //             isPositionUnique = false;
-            //             break;
-            //         }
-                    
-            //     }
-            // } while (!isPositionUnique);
-
-            
+    
+            // Define grid dimensions
+            const gridRows = 4; // Adjust as needed
+            const gridCols = 3; // Adjust as needed
+    
+            // Calculate cell size
+            const cellWidth = containerRect.width / gridCols;
+            const cellHeight = containerRect.height / gridRows;
+    
+            // Determine grid cell for current index
+            const row = Math.floor(index / gridCols);
+            const col = index % gridCols;
+    
+            // Calculate base position for grid cell
+            let x = col * cellWidth;
+            let y = row * cellHeight;
+    
+            // Add randomization within the cell
+            x += Math.random() * (cellWidth - artSetSizes[index].width);
+            y += Math.random() * (cellHeight - artSetSizes[index].height);
+    
             return {
                 xy: [x, y],
                 config: { mass: slideshow_mass, tension: slideshow_tension, friction: slideshow_friction }
             };
         });
     }, [set, artwork_sets.length, artSetSizes]);
-
 
 
     // Gesture bindings
