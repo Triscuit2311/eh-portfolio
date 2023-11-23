@@ -82,36 +82,36 @@ export default function FloatyGallery({ artwork_sets }) {
             const verticalMargin = containerRect.height * marginPercent / 100;
 
             // // Random position within margins
-            // const x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
-            // const y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
+             const x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
+             const y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
 
 
-            let x, y, isPositionUnique;
-            do {
-                // Random position within margins
-                x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
-                y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
-                artSetSizes[index].x = x;
-                artSetSizes[index].y = y;
+            // let x, y, isPositionUnique;
+            // do {
+            //     // Random position within margins
+            //     x = getRandomPosition(artSetSizes[index].width, horizontalMargin, centerMarginWidth, containerRect.width);
+            //     y = getRandomPosition(artSetSizes[index].height, verticalMargin, centerMarginHeight, containerRect.height);
+            //     artSetSizes[index].x = x;
+            //     artSetSizes[index].y = y;
 
-                isPositionUnique = true;
-                // Check if the position overlaps with any previous positions
+            //     isPositionUnique = true;
+            //     // Check if the position overlaps with any previous positions
 
-                const thresh = 100;
+            //     const thresh = 100;
 
-                for (let i = 0; i < artSetSizes.length; i++) {
-                    if(i === index) continue;
+            //     for (let i = 0; i < artSetSizes.length; i++) {
+            //         if(i === index) continue;
                    
-                    console.log(artSetSizes[i]);
+            //         console.log(artSetSizes[i]);
 
-                    if ( Math.abs(artSetSizes[i].x - x) < thresh || Math.abs(artSetSizes[i].y - y) < thresh ) {
+            //         if ( Math.abs(artSetSizes[i].x - x) < thresh || Math.abs(artSetSizes[i].y - y) < thresh ) {
                         
-                        isPositionUnique = false;
-                        break;
-                    }
+            //             isPositionUnique = false;
+            //             break;
+            //         }
                     
-                }
-            } while (!isPositionUnique);
+            //     }
+            // } while (!isPositionUnique);
 
             
             return {
